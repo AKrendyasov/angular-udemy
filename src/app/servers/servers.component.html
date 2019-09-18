@@ -3,10 +3,11 @@
   type="text" 
   class="form-control"
   (input)="onUpdateServerName($event)">
+<p>{{serverName}}</p>
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
-  (click)="onCreateServer()"
+  (click)="onCreateServer($event)"
 >Add server</button>
 <p>{{serverCreationStatus}}</p>
 <app-server></app-server>
